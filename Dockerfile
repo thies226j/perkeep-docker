@@ -8,7 +8,7 @@ RUN apk add --no-cache git ca-certificates sqlite-dev
 RUN mkdir -p /go/src
 
 # Build perkeep
-RUN git clone https://camlistore.googlesource.com/camlistore /go/src/perkeep.org
+RUN git clone https://github.com/perkeep/perkeep.git /go/src/perkeep.org
 WORKDIR /go/src/perkeep.org
 RUN git checkout "$PERKEEP_REF"
 RUN go run make.go
